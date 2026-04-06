@@ -15,19 +15,15 @@ function App() {
   return (
     <div className="container">
       <nav className="nav-bar">
-        <div className="logo">jm<span>.dev</span></div> 
-        <div class="status-card">
-  <div class="status-indicator"></div>
-  <div class="status-text">
-    <span class="status-label">Current Status</span>
-    <span class="status-value">Available for Internship </span>
+  <div className="logo">jm<span>.dev</span></div> 
+  <div className="status-card">
+    <div className="status-indicator"></div>
+    <div className="status-text">
+      <span className="status-label">Current Status</span>
+      <span className="status-value">Available for Internship</span>
+    </div>
   </div>
-        <div className="status-tag">
-          <span className="dot"></span> Available for Projects
-        </div>
-       
-</div>
-      </nav>
+</nav>
 
   
 

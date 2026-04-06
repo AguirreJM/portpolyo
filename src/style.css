@@ -690,3 +690,33 @@ footer {
   color: var(--text-main);
   font-weight: 500;
 }
+
+@media (max-width: 768px) {
+    .nav-bar {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem 0;
+    }
+    
+    .status-card {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Hide the redundant status-tag on mobile to save space */
+    .status-tag {
+        display: none;
+    }
+}
+
+body, html {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1.5rem; /* Slightly smaller padding for mobile */
+}
