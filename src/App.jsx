@@ -4,11 +4,11 @@ import './style.css'
 function App() {
   // 1. UPDATED DATA: Added LinkedIn and all 3 projects
   const skills = [
-    { name: "HTML", pct: 85, logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
-    { name: "CSS", pct: 80, logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
-    { name: "JavaScript", pct: 70, logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
-    { name: "PHP", pct: 60, logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" },
-    { name: "React JS", pct: 50, logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+    { name: "HTML", pct: 55, logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
+    { name: "CSS", pct: 45, logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
+    { name: "JavaScript", pct: 40, logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
+    { name: "PHP", pct: 40, logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" },
+    { name: "React JS", pct: 35, logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
     { name: "Figma", pct: 45, logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" }
   ];
 
@@ -144,7 +144,7 @@ function App() {
       </section>
 
   <section id="projects">
-  <h2 className="section-title">Selected Work</h2>
+  <h2 className="section-title">Projects</h2>
   <div className="project-grid">
     
     {/* Project 1: Pixelites */}
@@ -153,17 +153,16 @@ function App() {
         {/* CHANGED THIS: Pointing to /pixelites.png in your public folder */}
         <img src="/pixelites.png" alt="Pixelites" className="project-img" />
         <div className="image-overlay">
-          <span className="view-tag">View Project</span>
         </div>
       </div>
       <div className="card-body">
         <div className="card-header">
           <span className="code-icon">&lt;/&gt;</span>
-          <span className="project-year">2024</span>
+          <span className="project-year">2025</span>
         </div>
         <h3>Pixelites</h3>
         <p>A gamified study tool designed to make learning more engaging through interactive challenges.</p>
-        <div className="card-footer">HTML • CSS • JS</div>
+        <div className="card-footer">HTML • CSS • JS • FIGMA</div>
       </div>
     </div>
 
@@ -173,17 +172,16 @@ function App() {
         {/* CHANGED THIS: Pointing to /trashtalk.png */}
         <img src="/trashtalk.png" alt="Trashtalk" className="project-img" />
         <div className="image-overlay">
-          <span className="view-tag">View Project</span>
         </div>
       </div>
       <div className="card-body">
         <div className="card-header">
           <span className="code-icon">&lt;/&gt;</span>
-          <span className="project-year">2024</span>
+          <span className="project-year">2026</span>
         </div>
         <h3>Trashtalk</h3>
         <p>A smart waste management system focusing on community reporting and sustainability tracking.</p>
-        <div className="card-footer">PHP • SQL • JS</div>
+        <div className="card-footer">PHP • SQL • JS • FIGMA</div>
       </div>
     </div>
 
@@ -193,17 +191,16 @@ function App() {
         {/* CHANGED THIS: Pointing to /todo.png */}
         <img src="/todo.png" alt="Todo App" className="project-img" />
         <div className="image-overlay">
-          <span className="view-tag">View Project</span>
         </div>
       </div>
       <div className="card-body">
         <div className="card-header">
           <span className="code-icon">&lt;/&gt;</span>
-          <span className="project-year">2023</span>
+          <span className="project-year">2026</span>
         </div>
         <h3>Task Master</h3>
         <p>A minimalist productivity application featuring local storage for persistent data management.</p>
-        <div className="card-footer">React • LocalStorage</div>
+        <div className="card-footer">React • Node • HTML5 • CSS3</div>
       </div>
     </div>
 
