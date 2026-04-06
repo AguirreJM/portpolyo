@@ -267,23 +267,83 @@ h1 span {
 }
 
 /* PROJECTS */
+/* PROJECTS SECTION - REFINED ALIGNMENT */
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.5rem;
+    align-items: stretch; /* Ensures cards in the same row are equal height */
 }
 
 .project-card {
     background: var(--card-bg);
-    padding: 1.5rem;
     border-radius: 12px;
     border: 1px solid var(--border);
-    transition: transform 0.3s ease;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column; /* Stacks children: Image -> Body */
+    transition: all 0.3s ease;
 }
 
+.project-image-container {
+    width: 100%;
+    aspect-ratio: 16 / 9; /* Forces all images to the same dimensions */
+    position: relative;
+    overflow: hidden;
+    background-color: #2d3748;
+}
+
+.project-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Prevents stretching/squeishing */
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-body {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Makes the body take up all available vertical space */
+}
+
+.project-card h3 {
+    margin-bottom: 0.5rem;
+    color: var(--accent);
+}
+
+.project-card p {
+    font-size: 0.9rem;
+    color: var(--text-dim);
+    margin-bottom: 1.5rem;
+}
+
+.card-footer {
+    margin-top: auto; /* THE FIX: Pushes the tech stack to the bottom */
+    padding-top: 1rem;
+    font-size: 0.75rem;
+    font-family: monospace;
+    color: var(--text-dim);
+    border-top: 1px solid rgba(51, 65, 85, 0.5); /* Optional: adds a subtle separator */
+}
+
+/* HOVER EFFECTS & HIGHLIGHTS */
 .project-card:hover {
     transform: translateY(-5px);
     border-color: var(--accent);
+}
+
+.project-card:hover .project-img {
+    transform: scale(1.05);
+}
+
+.project-card.highlight {
+    border-color: rgba(34, 197, 94, 0.3);
+}
+
+.project-card.highlight:hover {
+    border-color: #22c55e;
+    box-shadow: 0 0 20px rgba(34, 197, 94, 0.15);
 }
 
 .card-header {
@@ -556,4 +616,77 @@ footer {
         width: 50px;
         height: 50px;
     }
+}
+
+.skills-marquee {
+  padding: 40px 0;
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.marquee-inner {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+}
+
+.marquee-content {
+  display: flex;
+  gap: 4rem;
+  white-space: nowrap;
+  animation: scroll 25s linear infinite;
+}
+
+.marquee-content span {
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: var(--text-dim);
+  transition: color 0.3s;
+}
+
+.marquee-content span:hover {
+  color: var(--accent);
+}
+
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.status-card {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--card-bg);
+  padding: 8px 16px;
+  border-radius: 100px;
+  border: 1px solid var(--border);
+  margin-top: 20px;
+}
+
+.status-indicator {
+  width: 8px;
+  height: 8px;
+  background: #22c55e;
+  border-radius: 50%;
+  /* This uses the animation already in your style.css */
+  animation: status-pulse 2s infinite;
+}
+
+.status-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  display: block;
+  line-height: 1;
+  margin-bottom: 2px;
+}
+
+.status-value {
+  font-size: 13px;
+  color: var(--text-main);
+  font-weight: 500;
 }

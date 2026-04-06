@@ -15,11 +15,21 @@ function App() {
   return (
     <div className="container">
       <nav className="nav-bar">
-        <div className="logo">jm<span>.dev</span></div>
+        <div className="logo">jm<span>.dev</span></div> 
+        <div class="status-card">
+  <div class="status-indicator"></div>
+  <div class="status-text">
+    <span class="status-label">Current Status</span>
+    <span class="status-value">Available for Internship </span>
+  </div>
         <div className="status-tag">
           <span className="dot"></span> Available for Projects
         </div>
+       
+</div>
       </nav>
+
+  
 
       <header className="hero">
         <div className="hero-layout">
@@ -143,6 +153,20 @@ function App() {
         </div>
       </section>
 
+      <section class="skills-marquee">
+        <h2 class="section-title"></h2>
+  <div class="marquee-inner">
+    <div class="marquee-content">
+      <span>HTML5</span> <span>CSS3</span> <span>JAVASCRIPT</span> 
+      <span>REACT</span> <span>NODE.JS</span> <span>PHP</span> 
+      <span>SQL</span> <span>FIGMA</span>
+      <span>HTML5</span> <span>CSS3</span> <span>JAVASCRIPT</span> 
+      <span>REACT</span> <span>NODE.JS</span> <span>PHP</span> 
+      <span>SQL</span> <span>FIGMA</span>
+    </div>
+  </div>
+</section>
+
   <section id="projects">
   <h2 className="section-title">Projects</h2>
   <div className="project-grid">
@@ -198,13 +222,13 @@ function App() {
           <span className="code-icon">&lt;/&gt;</span>
           <span className="project-year">2026</span>
         </div>
-        <h3>Task Master</h3>
-        <p>A minimalist productivity application featuring local storage for persistent data management.</p>
+        <h3>Todo List</h3>
+        <p>A high-performance task management app featuring local storage persistence and dynamic priority filtering.</p>
         <div className="card-footer">React • Node • HTML5 • CSS3</div>
       </div>
     </div>
-
   </div>
+
 </section>
 
       <section id="contact">
@@ -222,7 +246,7 @@ function App() {
           </a>
 
           {/* 5. FIXED: Added the missing LinkedIn link */}
-          <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noreferrer" className="contact-item">
+          <a href="https://www.linkedin.com/in/john-michael-aguirre-7368773bb/" target="_blank" rel="noreferrer" className="contact-item">
             <div className="contact-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
             </div>
@@ -244,10 +268,15 @@ function App() {
         </div>
       </section>
 
+     
+
       <footer>
         <p>// Designed & Built by John Michael Aguirre</p>
       </footer>
     </div>
+
+    
+    
   )
 }
 
