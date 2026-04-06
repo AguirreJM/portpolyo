@@ -1,5 +1,44 @@
 import { useEffect } from 'react'
 import './style.css'
+import { useEffect, useState } from 'react' // Add useState
+import './style.css'
+
+function App() {
+  // Initialize theme from localStorage so it remembers the user's choice
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+    return localStorage.getItem('theme') !== 'light'
+  });
+
+  useEffect(() => {
+    if (isDarkMode) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.documentElement.setAttribute('data-theme', 'light');
+      localStorage.setItem('theme', 'light');
+    }
+  }, [isDarkMode]);
+
+  const toggleTheme = () => setIsDarkMode(!isDarkMode);
+
+  return (
+    <div className="container">
+      <nav className="nav-bar">
+        <div className="logo">jm<span>.dev</span></div> 
+        
+        {/* THE TOGGLE SWITCH */}
+        <button className="theme-toggle" onClick={toggleTheme} aria-label="Toggle Theme">
+          {isDarkMode ? '☀️' : '🌙'}
+        </button>
+
+        <div className="status-card">
+          {/* ... existing status card code ... */}
+        </div>
+      </nav>
+      {/* ... rest of your components ... */}
+    </div>
+  )
+}
 
 function App() {
   // 1. UPDATED DATA: Added LinkedIn and all 3 projects
